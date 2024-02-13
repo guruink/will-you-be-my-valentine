@@ -1,33 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* styles/tailwind.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.button {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid #6BD3E2;
+  color: #F2E6C3;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+
+  position: relative;
+  isolation: isolate;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #6BD3E2;
+  inset: 0;
+
+  scale: .0 1;
+  transform-origin: right;
+  transition: scale 450ms
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.button:hover::after, 
+.button:focus-visible::after {
+  transform-origin: left;
+  scale: 1 1;
 }
