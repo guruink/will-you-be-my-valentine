@@ -19,16 +19,16 @@ const YesNoComponent = () => {
   ];
 
   const phrases = [
-    "No",
-    "Are you sure?",
-    "Really Sure",
-    "Cookie says please",
-    "Don't do this to me",
-    "I am gonna cry",
-    "You are breaking my heart ;(",
-    "I am very sad",
-    "I am very very sad",
-    "I am very very very sad",
+    "Naa too?",
+    "Sure too?",
+    "Tui aram korte parli?",
+    "1.3 yrs sob ses?",
+    "Haa bol biriyani khabo",
+    "Aram korchis to DEBO",
+    "Haa bol Madhyamik e 90% ;(",
+    "Tor kach e ata asa chilo na",
+    "Chiii NONI chiii",
+    "Tui dhon chinli, mon noi",
   ];
 
   const [noCount, setNoCount] = useState(0);
